@@ -19,7 +19,7 @@ def xor_division(message, polynomial):
 
 
 if __name__ == "__main__":
-    message = "110101101"
+    message = "1011011"
     start_message_len = len(message)
     polynomial = "10011"
     zero_cnt = 0
@@ -53,4 +53,7 @@ if __name__ == "__main__":
 
     message = int(message, 2)
     message <<= syndrome
-    print("Decode message:", bin(message)[0: start_message_len])
+
+    print("Decode message:", bin(message)[0:start_message_len + 2])
+
+
