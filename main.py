@@ -24,6 +24,7 @@ if __name__ == "__main__":
     polynomial = "10011"
     zero_cnt = 0
     print("Message:", message)
+    print(int(message, 2))
 
     if len(message) < 15:
         while len(message) < 15:
@@ -53,6 +54,9 @@ if __name__ == "__main__":
 
     encode_message = int(message, 2)
     encode_message <<= syndrome
+    print(encode_message)
+    print(syndrome)
+
 
     print("Decode message:", bin(encode_message)[0:start_message_len + 2])
 
