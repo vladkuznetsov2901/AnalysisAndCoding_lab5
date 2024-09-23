@@ -50,7 +50,7 @@ if __name__ == "__main__":
     encode_message = bin(encode_message)
 
     syndrome = xor_division(encode_message, polynomial)
-    print("Syndrome:", bin(remainder))
+    print("Syndrome:", bin(syndrome))
 
     encode_message = int(message, 2)
     encode_message <<= syndrome
